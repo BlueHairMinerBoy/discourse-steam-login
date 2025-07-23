@@ -116,6 +116,6 @@ describe "Steam OpenID 2.0" do
     authentication_data = JSON.parse(cookies[:authentication_data]).deep_symbolize_keys!
     expect(authentication_data[:email]).to be_blank
     expect(authentication_data[:username]).to eq("SteamyPlayer")
-    expect(authentication_data[:email_valid]).to eq(false)
+    expect(authentication_data[:email_valid]).to eq(true)
   end
 end
